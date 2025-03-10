@@ -1,8 +1,11 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @theme {
   /* Her tilføjes theme variable // tokens */
@@ -16,11 +19,41 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+
+  body {
+    font-family: "Cormorant Garamond", serif;
+    background-color: #f8f0e3;
+    color: #5a3e36;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Great Vibes", cursive;
+    color: #b85c38;
+  }
+
+  header,
+  footer {
+    background-color: #f4e1d2;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  article {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }

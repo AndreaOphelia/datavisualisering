@@ -1,15 +1,55 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
+
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+  <article class="bg-white p-8 rounded-lg shadow-lg">
+    <h1
+      class="text-4xl md:text-5xl lg:text-6xl text-center text-pink-600 font-serif"
+    >
+      Danskerne Gifter sig Borgerligt
+    </h1>
+    <h2
+      class="text-3xl md:text-4xl lg:text-5xl text-center text-pink-500 font-serif"
+    >
+      Og de fortsætter med det
+    </h2>
+    <h3
+      class="text-2xl md:text-3xl lg:text-4xl text-center text-pink-400 font-serif"
+    >
+      En statestik viser at danskerne siden 2007 har foretrukket det borgerlige
+      bryllup- og tendensen fortsætter
+    </h3>
+    <img
+      src="../img/wedding.jpg"
+      alt="wedding"
+      class="my-4 mx-auto rounded-lg shadow-md"
+    />
+    <p class="text-lg text-gray-700 leading-relaxed">
+      Ifølge tal fra Danmarks Statistik har danskerne siden 2007 foretrukket det
+      borgerlige bryllup frem for det kirkelige. Og tendensen fortsætter. I 2022
+      blev der indgået ca. 20.000 borgerlige ægteskaber, mens der blev indgået
+      ca. 20.000 kirkelige ægteskaber.
+    </p>
+    <h3 class="text-2xl md:text-3xl lg:text-4xl text-pink-400 font-serif mt-8">
+      Forskellen mellem kirkelige og borgerlige vielser i 2007
+    </h3>
+    <img
+      src="../img/first.svg"
+      alt="vielser i 2007"
+      class="my-4 mx-auto rounded-lg shadow-md"
+    />
+    <h3 class="text-2xl md:text-3xl lg:text-4xl text-pink-400 font-serif mt-8">
+      Forskellen mellem kirkelige og borgerlige vielser i 2022
+    </h3>
+    <img
+      src="../img/2022.svg"
+      alt="vielser i 2022"
+      class="my-4 mx-auto rounded-lg shadow-md"
+    />
+  </article>
 </MainLayout>
